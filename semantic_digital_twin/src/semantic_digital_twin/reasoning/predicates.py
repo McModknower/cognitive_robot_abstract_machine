@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 import trimesh.boolean
 from trimesh.collision import CollisionManager
-from typing_extensions import List, TYPE_CHECKING, Iterable, Type
+from typing_extensions import List, TYPE_CHECKING, Iterable, Type, Optional
 
 from krrood.entity_query_language.predicate import (
     Predicate,
@@ -255,6 +255,11 @@ def is_supported_by(
         supported_body.global_transform,
     )():
         return False
+    fast_result = __try_is_supported_by_fast(
+        supported_body, supporting_body, max_intersection_height
+    )
+    if fast_result is not None:
+        return fast_result
     bounding_box_supported_body = (
         supported_body.collision.as_bounding_box_collection_at_origin(
             HomogeneousTransformationMatrix(reference_frame=supported_body)
@@ -266,6 +271,8 @@ def is_supported_by(
         ).event
     )
 
+    return False
+    
     intersection = (
         bounding_box_supported_body & bounding_box_supporting_body
     ).bounding_box()
@@ -277,6 +284,71 @@ def is_supported_by(
     size = sum([si.upper - si.lower for si in z_intersection.simple_sets])
     return size < max_intersection_height
 
+
+def __try_is_supported_by_fast(
+    supported_body: Body, supporting_body: Body, max_intersection_height: float
+) -> Optional[bool]:
+    if len(supported_body.collision.shapes) != 1 \
+       or len(supporting_body.collision.shapes) != 1:
+        return None
+    supported_shape = supported_body.collision.shapes[0]
+    supporting_shape = supporting_body.collision.shapes[0]
+
+    supported_bb_local = supported_shape.local_frame_bounding_box
+    supporting_bb_local = supporting_shape.local_frame_bounding_box
+
+    reference_frame = supported_body
+
+    supported_bb_world = _bounding_box_transform(supported_bb_local, reference_frame)
+    supporting_bb_world = _bounding_box_transform(supporting_bb_local, reference_frame)
+
+    # calculate intersection
+
+    if not supported_bb_world.max_z - supporting_bb_world.min_z < max_intersection_height:
+        return False
+
+    if supported_bb_world.min_x > supporting_bb_world.max_x \
+       or supported_bb_world.max_x < supporting_bb_world.min_x \
+       or supported_bb_world.min_y > supporting_bb_world.max_y \
+       or supported_bb_world.max_y < supporting_bb_world.min_y:
+        return False
+
+    return True
+
+
+def _bounding_box_transform(bb: BoundingBox, reference_frame: KinematicStructureEntity):
+    new_origin_reference_T_self = bb.origin.reference_frame._world.transform(
+        bb.origin, reference_frame
+    )
+    # Get all 8 corners of the BB in link-local space
+    list_self_T_corner = [
+        np.array([x, y, z, 1])
+        for x in (bb.min_x, bb.max_x)
+        for y in (bb.min_y, bb.max_y)
+        for z in (bb.min_z, bb.max_z)
+    ]  # shape (8, 3)
+
+    list_reference_T_corner = [
+        new_origin_reference_T_self.to_np() @ self_T_corner
+        for self_T_corner in list_self_T_corner
+    ]
+
+    list_reference_P_corner = [
+        reference_T_corner[:3] for reference_T_corner in list_reference_T_corner
+    ]
+
+    # Compute new corner points
+    min_corner = np.min(list_reference_P_corner, axis=0)
+    max_corner = np.max(list_reference_P_corner, axis=0)
+
+    world_bb = BoundingBox(
+        *min_corner[:3], *max_corner[:3],
+        origin=HomogeneousTransformationMatrix(
+            reference_frame=reference_frame
+        )
+    )
+
+    return world_bb
 
 @symbolic_function
 def is_supporting(supporting_body: Body, max_intersection_height: float = 0.1) -> bool:
@@ -401,16 +473,10 @@ class ViewDependentSpatialRelation(PointSpatialRelation, ABC):
         ref_np = self.point_of_view.to_np()
         front_world = ref_np[:3, index]
         front_norm = front_world / (np.linalg.norm(front_world) + self.eps)
-        front_norm = Vector3(
-            x=front_norm[0],
-            y=front_norm[1],
-            z=front_norm[2],
-            reference_frame=self.point_of_view.reference_frame,
-        )
 
-        s_body = front_norm.dot(self.point.to_vector3())
-        s_other = front_norm.dot(self.other.to_vector3())
-        return (s_body - s_other).compile()()
+        s_body = front_norm.dot(self.point.to_np()[:3])
+        s_other = front_norm.dot(self.other.to_np()[:3])
+        return s_body - s_other
 
 
 @dataclass

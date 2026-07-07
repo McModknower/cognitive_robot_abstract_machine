@@ -1,0 +1,533 @@
+Tue Jul  7 12:32:28 2026    test.prof
+
+         84657887 function calls (84632871 primitive calls) in 124.251 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  124.326  124.326 {built-in method builtins.exec}
+        1    0.000    0.000  124.326  124.326 <string>:1(<module>)
+        1    0.033    0.033  124.326  124.326 /home/teddy/uni-notes/ma/rumspielen/cram/mcmodknower.py:43(test)
+    10000    0.153    0.000  124.292    0.012 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/entity_query_language/predicate.py:49(wrapper)
+    10000    0.369    0.000  123.934    0.012 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/reasoning/predicates.py:239(is_supported_by)
+    10134    0.233    0.000   72.563    0.007 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:126(as_bounding_box_collection_at_origin)
+    12991    1.972    0.000   71.771    0.006 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:1186(transform_to_origin)
+   827586    1.432    0.000   37.206    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1523(to_sx)
+   386829    3.646    0.000   31.166    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1547(array_like_to_casadi_sx)
+   538830    1.780    0.000   26.696    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11067(__init__)
+   256956    1.004    0.000   24.695    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:553(to_np)
+   169910    0.616    0.000   24.503    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:875(__init__)
+   538830   12.449    0.000   21.936    0.000 {built-in method casadi._casadi.new_DM}
+   336829    0.608    0.000   18.719    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:451(from_casadi_sx)
+    10000    0.174    0.000   18.013    0.002 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/reasoning/predicates.py:457(__call__)
+    10000    0.304    0.000   17.839    0.002 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/reasoning/predicates.py:392(_signed_distance_along_direction)
+    10134    0.066    0.000   16.472    0.002 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:231(event)
+   932541    1.127    0.000   16.429    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:461(casadi_sx)
+    12991    0.189    0.000   15.433    0.001 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:998(simple_event)
+    12991    0.199    0.000   14.288    0.001 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:1141(get_points)
+    20000    0.260    0.000   14.056    0.001 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/world_entity.py:333(center_of_mass)
+    32991    0.152    0.000   14.049    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world.py:2141(transform)
+   650667    1.706    0.000   13.734    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13825(__init__)
+  3745881    4.271    0.000   12.199    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13692(shape)
+   209017    0.510    0.000   12.051    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:168(__init__)
+   957496    1.463    0.000   11.156    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13715(__setitem__)
+   156919    0.621    0.000   10.262    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:505(__getitem__)
+   957496    0.816    0.000    9.322    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:12008(set)
+    42991    0.073    0.000    9.008    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world.py:1954(compute_forward_kinematics)
+    42991    0.191    0.000    8.936    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_computations/forward_kinematics.py:137(compute)
+   650667    4.496    0.000    8.806    0.000 {built-in method casadi._casadi.new_SX}
+    45982    0.049    0.000    8.544    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:440(__matmul__)
+   957496    8.506    0.000    8.506    0.000 {built-in method casadi._casadi.SX_set}
+    45982    0.247    0.000    8.495    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:425(dot)
+   256956    0.175    0.000    8.358    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11140(full)
+   256956    0.924    0.000    8.184    0.000 {built-in method casadi._casadi.DM_full}
+    25982    0.157    0.000    8.023    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:904(from_iterable)
+    87946    0.220    0.000    7.897    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:934(_binary)
+   103928    0.841    0.000    7.436    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:251(from_point_rotation_matrix)
+    77946    0.113    0.000    7.070    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:948(__add__)
+   256956    1.451    0.000    6.859    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11281(toarray)
+    12991    0.234    0.000    6.202    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:443(inverse)
+   215892    0.488    0.000    5.934    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:893(_verify_type)
+    20000    0.229    0.000    5.598    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:1368(dot)
+   468703    0.690    0.000    5.350    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13703(__getitem__)
+    81964    0.240    0.000    5.035    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:190(_verify_type)
+   353838    0.429    0.000    4.945    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:520(__setitem__)
+    20000    0.058    0.000    4.904    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:1095(to_vector3)
+  1384452    1.675    0.000    4.839    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11106(shape)
+  2223229    3.933    0.000    4.624    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:77(_swig_getattr)
+    30000    0.127    0.000    4.576    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:1124(__init__)
+    12991    0.156    0.000    4.513    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:943(x_interval)
+   468703    0.389    0.000    4.505    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11988(get)
+   185892    0.411    0.000    4.448    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:804(__init__)
+  1664399    1.099    0.000    4.418    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11939(<lambda>)
+  3745881    2.073    0.000    4.360    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:5993(size1)
+  6225942    2.807    0.000    4.307    0.000 {built-in method builtins.isinstance}
+   947676    0.793    0.000    4.234    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:530(shape)
+  2594030    1.318    0.000    4.193    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:73(_swig_setattr)
+   468703    3.143    0.000    4.116    0.000 {built-in method casadi._casadi.SX_get}
+    12991    0.119    0.000    4.062    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:967(z_interval)
+    12991    0.121    0.000    3.989    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:955(y_interval)
+    78973    0.052    0.000    3.962    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:35382(mtimes)
+    78973    2.398    0.000    3.909    0.000 {built-in method casadi._casadi.mtimes}
+  3745881    1.821    0.000    3.567    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:6043(size2)
+   289947    2.316    0.000    3.473    0.000 {built-in method casadi._casadi.transpose}
+  1521288    0.934    0.000    3.405    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11935(<lambda>)
+  1070614    2.289    0.000    3.391    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:135(DM_from_array)
+    10000    0.025    0.000    3.086    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:596(compile)
+    10000    0.116    0.000    3.033    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:237(__post_init__)
+    77946    0.110    0.000    3.000    0.000 {built-in method _operator.add}
+    12991    0.301    0.000    2.972    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:1154(from_min_max)
+    77946    0.041    0.000    2.890    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:9111(__add__)
+  2594030    2.875    0.000    2.875    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:54(_swig_setattr_nondynamic)
+    77946    1.530    0.000    2.849    0.000 {built-in method casadi._casadi.plus}
+   281878    0.370    0.000    2.745    0.000 {method 'all' of 'numpy.ndarray' objects}
+   894632    1.032    0.000    2.732    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:550(is_constant)
+    12991    0.149    0.000    2.605    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:83(from_data)
+   309549    2.553    0.000    2.555    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    65982    0.162    0.000    2.492    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1050(__init__)
+   281878    0.228    0.000    2.375    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:67(_all)
+  3745881    2.287    0.000    2.287    0.000 {built-in method casadi._casadi.GenSX_size1}
+   256956    0.137    0.000    2.247    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:11113(T)
+  1052742    0.537    0.000    2.222    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:9331(<lambda>)
+   506866    0.418    0.000    2.135    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:180(DM_from_csc)
+   569774    2.062    0.000    2.062    0.000 {built-in method numpy.array}
+    10000    0.031    0.000    2.061    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/world_entity.py:350(global_transform)
+   559730    0.437    0.000    2.056    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:443(__post_init__)
+  1082428    0.866    0.000    1.955    0.000 {built-in method builtins.hasattr}
+  1384452    0.849    0.000    1.762    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:4380(size1)
+  3745881    1.746    0.000    1.746    0.000 {built-in method casadi._casadi.GenSX_size2}
+   538830    0.409    0.000    1.666    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:9335(<lambda>)
+   361784    0.334    0.000    1.589    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:808(_verify_type)
+  1541378    0.562    0.000    1.563    0.000 <frozen abc>:117(__instancecheck__)
+    25982    0.023    0.000    1.555    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:401(x)
+   894632    0.577    0.000    1.529    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:12956(is_constant)
+   131964    0.137    0.000    1.438    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1059(_verify_type)
+  1384452    0.699    0.000    1.402    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:4430(size2)
+    32991    0.022    0.000    1.385    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13699(T)
+    25982    0.020    0.000    1.342    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:409(y)
+    25982    0.021    0.000    1.323    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:417(z)
+    20000    0.044    0.000    1.313    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:547(free_variables)
+    20004    0.065    0.000    1.293    0.000 /usr/lib/python3.12/copy.py:61(copy)
+    50000    0.099    0.000    1.292    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:1146(_verify_type)
+    12991    0.049    0.000    1.273    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1274(dot)
+    20000    0.017    0.000    1.264    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:37137(symvar)
+    20000    0.931    0.000    1.247    0.000 {built-in method casadi._casadi.symvar}
+    20000    0.043    0.000    1.182    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:120(__copy__)
+   153035    0.080    0.000    1.133    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:12815(eye)
+    10000    0.041    0.000    1.119    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:295(_setup_compiled_function)
+    51964    0.132    0.000    1.097    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1178(__init__)
+    38973    0.094    0.000    1.093    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:97(_setitem_without_cpp)
+28676/28312    0.078    0.000    1.065    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:121(get_cached)
+   153035    0.659    0.000    1.052    0.000 {built-in method casadi._casadi.SX_eye}
+    10000    0.083    0.000    1.052    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:138(compile)
+  1541378    1.001    0.000    1.001    0.000 {built-in method _abc._abc_instancecheck}
+    10134    0.191    0.000    0.971    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:428(from_simple_sets)
+    30264    0.053    0.000    0.961    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:364(verify)
+    10000    0.016    0.000    0.956    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:954(__sub__)
+   894632    0.952    0.000    0.952    0.000 {built-in method casadi._casadi.SX_is_constant}
+83325/72991    0.386    0.000    0.922    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/utils.py:890(wrapper)
+  1384452    0.913    0.000    0.913    0.000 {built-in method casadi._casadi.GenDM_size1}
+    30336    0.235    0.000    0.910    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:679(__hash__)
+   256956    0.169    0.000    0.774    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:10642(elements)
+   457098    0.773    0.000    0.773    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+    20000    0.041    0.000    0.771    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:645(center_mass)
+    38973    0.049    0.000    0.705    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/variable.py:108(make_value)
+  1384452    0.703    0.000    0.703    0.000 {built-in method casadi._casadi.GenDM_size2}
+  2250619    0.703    0.000    0.703    0.000 {method 'get' of 'dict' objects}
+    10134    0.096    0.000    0.680    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedset.py:108(__init__)
+    12991    0.038    0.000    0.655    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1458(T)
+    10000    0.064    0.000    0.655    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:259(_validate_variables)
+  3365643    0.655    0.000    0.655    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:457(casadi_sx)
+   386829    0.158    0.000    0.645    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/scipy/_lib/_sparse.py:10(issparse)
+    38973    0.042    0.000    0.633    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/interval.py:108(as_composite_set)
+    12991    0.229    0.000    0.625    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:113(__init__)
+    77946    0.450    0.000    0.621    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/interval.py:46(from_data)
+2305232/2294244    0.551    0.000    0.620    0.000 {built-in method builtins.len}
+   256956    0.605    0.000    0.605    0.000 {built-in method casadi._casadi.DM_elements}
+    26282    0.141    0.000    0.593    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:69(_wrapreduction)
+    38973    0.355    0.000    0.591    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/interval.py:189(from_simple_sets)
+    33259    0.190    0.000    0.535    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:323(update)
+   564643    0.478    0.000    0.478    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   103928    0.089    0.000    0.477    0.000 <frozen _collections_abc>:892(__iter__)
+    77946    0.115    0.000    0.472    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:914(__float__)
+    10000    0.019    0.000    0.455    0.000 {built-in method _operator.sub}
+    12991    0.056    0.000    0.446    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3190(min)
+     8312    0.024    0.000    0.441    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:393(local_frame_bounding_box)
+    12991    0.033    0.000    0.438    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:665(__neg__)
+    10000    0.008    0.000    0.436    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:9113(__sub__)
+    10134    0.111    0.000    0.430    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedset.py:664(update)
+    10000    0.236    0.000    0.428    0.000 {built-in method casadi._casadi.minus}
+     8312    0.080    0.000    0.417    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:1117(from_mesh)
+    12991    0.204    0.000    0.415    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:92(_update_cpp_object)
+    10000    0.008    0.000    0.369    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:37830(densify)
+    10000    0.176    0.000    0.361    0.000 {built-in method casadi._casadi.densify}
+    12991    0.056    0.000    0.355    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:545(update)
+     5167    0.110    0.000    0.354    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_computations/forward_kinematics.py:154(compute_np)
+    77946    0.114    0.000    0.327    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:60(__getitem__)
+    10000    0.050    0.000    0.325    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24062(__init__)
+   162241    0.153    0.000    0.263    0.000 {built-in method builtins.hash}
+   155892    0.056    0.000    0.260    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:44(get_variable)
+    20000    0.048    0.000    0.252    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/world_entity.py:481(combined_mesh)
+    10000    0.122    0.000    0.248    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2575(norm)
+    38973    0.058    0.000    0.239    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:63(__setitem__)
+    31855    0.187    0.000    0.236    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:48(hash_fallback)
+    12991    0.033    0.000    0.234    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3052(max)
+    10000    0.070    0.000    0.230    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbol_graph/symbol_graph.py:474(__new__)
+    10000    0.066    0.000    0.220    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:149(setup_output)
+    10000    0.209    0.000    0.209    0.000 {built-in method casadi._casadi.new_Function}
+    10000    0.054    0.000    0.204    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24051(buffer)
+    33805    0.098    0.000    0.188    0.000 {built-in method builtins.sorted}
+    25982    0.016    0.000    0.188    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:6804(zeros)
+    77946    0.044    0.000    0.188    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:13268(__float__)
+   194865    0.115    0.000    0.179    0.000 /usr/lib/python3.12/enum.py:202(__get__)
+      100    0.000    0.000    0.175    0.002 /usr/lib/python3.12/functools.py:979(__get__)
+      100    0.001    0.000    0.175    0.002 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:112(combined_mesh)
+    25982    0.123    0.000    0.173    0.000 {built-in method casadi._casadi.GenSX_zeros}
+     5067    0.158    0.000    0.170    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/math.py:5(inverse_frame)
+    77946    0.143    0.000    0.143    0.000 {built-in method casadi._casadi.SX___float__}
+    66618    0.087    0.000    0.138    0.000 {method 'extend' of 'list' objects}
+    49107    0.045    0.000    0.137    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:442(<genexpr>)
+    23125    0.030    0.000    0.133    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:144(__init__)
+    10000    0.037    0.000    0.129    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24711(__init__)
+   272811    0.126    0.000    0.126    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/variable.py:42(__hash__)
+    25982    0.044    0.000    0.113    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/world_entity.py:113(__eq__)
+    38973    0.079    0.000    0.111    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:280(__setitem__)
+    10000    0.023    0.000    0.107    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/entity_query_language/predicate.py:168(_any_of_the_kwargs_is_a_variable)
+      222    0.002    0.000    0.103    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:3245(copy)
+    10000    0.058    0.000    0.099    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbol_graph/symbol_graph.py:209(add_node)
+    10000    0.077    0.000    0.098    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/entity_query_language/utils.py:201(merge_args_and_kwargs)
+    40334    0.060    0.000    0.096    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world.py:527(__hash__)
+    12991    0.011    0.000    0.093    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:12072(__neg__)
+    66518    0.090    0.000    0.090    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/variable.py:39(__lt__)
+    38973    0.027    0.000    0.090    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:256(__iter__)
+    59709    0.051    0.000    0.088    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:207(__hash__)
+   173173    0.087    0.000    0.087    0.000 {built-in method __new__ of type object at 0xa44b40}
+   196438    0.086    0.000    0.086    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/world_entity.py:148(__hash__)
+    12991    0.058    0.000    0.083    0.000 {built-in method casadi._casadi.SX___neg__}
+    36003    0.082    0.000    0.082    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+    10015    0.016    0.000    0.081    0.000 {built-in method builtins.any}
+    47523    0.080    0.000    0.080    0.000 {built-in method builtins.getattr}
+   103928    0.080    0.000    0.080    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/spatial_types/spatial_types.py:89(_ensure_consistent_frame)
+    77946    0.044    0.000    0.078    0.000 {function VariableMap.__getitem__ at 0x731226562ac0}
+    20000    0.071    0.000    0.076    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:91(flatten)
+    10134    0.028    0.000    0.075    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:216(__post_init__)
+    12991    0.037    0.000    0.075    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:376(fill_missing_variables)
+    51964    0.053    0.000    0.074    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:920(__iter__)
+   194865    0.064    0.000    0.064    0.000 /usr/lib/python3.12/enum.py:1292(value)
+    30000    0.015    0.000    0.063    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/entity_query_language/predicate.py:173(<genexpr>)
+      218    0.001    0.000    0.062    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:149(copy)
+    10000    0.008    0.000    0.059    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:544(__len__)
+    10000    0.056    0.000    0.056    0.000 {method 'dot' of 'numpy.ndarray' objects}
+  686/468    0.003    0.000    0.056    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:265(_get_colors)
+      100    0.001    0.000    0.056    0.001 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1421(concatenate)
+      218    0.000    0.000    0.055    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:168(face_colors)
+    51964    0.025    0.000    0.054    0.000 <frozen _collections_abc>:868(__iter__)
+      100    0.001    0.000    0.053    0.001 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:2827(mass_properties)
+    12991    0.014    0.000    0.051    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1502(_create_return_type)
+    31855    0.049    0.000    0.049    0.000 {method 'hexdigest' of '_blake2.blake2b' objects}
+    25982    0.038    0.000    0.048    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:363(items)
+   110876    0.047    0.000    0.047    0.000 {method 'items' of 'dict' objects}
+    10000    0.041    0.000    0.041    0.000 {built-in method casadi._casadi.new_FunctionBuffer}
+    10753    0.040    0.000    0.040    0.000 {built-in method numpy.zeros}
+    31855    0.039    0.000    0.039    0.000 {method 'tobytes' of 'numpy.ndarray' objects}
+    12991    0.014    0.000    0.037    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/random_events/src/random_events/product_algebra.py:36(variables)
+    10000    0.016    0.000    0.037    0.000 <string>:2(__init__)
+    23125    0.022    0.000    0.036    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:174(__new__)
+    10000    0.010    0.000    0.036    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:18152(<lambda>)
+      100    0.027    0.000    0.034    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/triangles.py:217(mass_properties)
+    56384    0.032    0.000    0.032    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:353(<genexpr>)
+      218    0.005    0.000    0.031    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:814(vertex_to_face_color)
+    10000    0.010    0.000    0.031    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:18148(<lambda>)
+      271    0.004    0.000    0.030    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:102(__init__)
+    10000    0.012    0.000    0.029    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24617(set_res)
+    20000    0.024    0.000    0.029    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:96(__len__)
+    10000    0.007    0.000    0.028    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24585(<lambda>)
+    56794    0.028    0.000    0.028    0.000 {built-in method builtins.id}
+    10000    0.026    0.000    0.026    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:302(_setup_constant_result)
+    10000    0.025    0.000    0.025    0.000 {method 'add_node' of 'rustworkx.PyDiGraph' objects}
+    10000    0.008    0.000    0.024    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24583(<lambda>)
+    12991    0.016    0.000    0.024    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sorteddict.py:352(keys)
+    12991    0.006    0.000    0.024    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedset.py:317(__iter__)
+    10000    0.006    0.000    0.023    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:105(to_casadi_parameters)
+       43    0.000    0.000    0.023    0.001 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:859(mesh)
+      127    0.001    0.000    0.022    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:2571(apply_transform)
+    10000    0.022    0.000    0.022    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbol_graph/symbol_graph.py:120(__post_init__)
+    10000    0.009    0.000    0.021    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/casadi/casadi.py:24683(_self)
+    51964    0.020    0.000    0.020    0.000 {built-in method from_iterable}
+    23547    0.020    0.000    0.020    0.000 {method 'update' of 'dict' objects}
+    40563    0.019    0.000    0.019    0.000 {method 'values' of 'dict' objects}
+     4566    0.018    0.000    0.019    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:869(local_frame_bounding_box)
+    56384    0.019    0.000    0.019    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:355(<genexpr>)
+ 3539/703    0.007    0.000    0.019    0.000 /usr/lib/python3.12/copy.py:118(deepcopy)
+      256    0.000    0.000    0.019    0.000 {method 'mean' of 'numpy.ndarray' objects}
+      256    0.004    0.000    0.018    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:118(_mean)
+    12991    0.007    0.000    0.018    0.000 {built-in method builtins.iter}
+    10000    0.017    0.000    0.017    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/singleton.py:16(__call__)
+    38973    0.017    0.000    0.017    0.000 <frozen _collections_abc>:845(__init__)
+    10000    0.017    0.000    0.017    0.000 {built-in method casadi._casadi.FunctionBuffer_set_res}
+       43    0.001    0.000    0.017    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/creation.py:772(box)
+      144    0.003    0.000    0.015    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/triangles.py:22(cross)
+      182    0.006    0.000    0.015    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1522(cross)
+  702/698    0.002    0.000    0.015    0.000 /usr/lib/python3.12/copy.py:217(_deepcopy_dict)
+    10000    0.006    0.000    0.014    0.000 /usr/lib/python3.12/inspect.py:295(isclass)
+    90937    0.014    0.000    0.014    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:1197(_verify_type)
+    41073    0.014    0.000    0.014    0.000 {built-in method builtins.issubclass}
+      100    0.000    0.000    0.013    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:925(triangles_cross)
+       43    0.001    0.000    0.013    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:449(face_normals)
+     5324    0.012    0.000    0.012    0.000 {built-in method numpy.empty}
+    25270    0.012    0.000    0.012    0.000 {method 'append' of 'list' objects}
+    10000    0.012    0.000    0.012    0.000 {built-in method casadi._casadi.FunctionBuffer__self}
+      311    0.003    0.000    0.011    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:577(to_rgba)
+    10334    0.008    0.000    0.010    0.000 /usr/lib/python3.12/uuid.py:240(__eq__)
+    10134    0.009    0.000    0.009    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/sortedcontainers/sortedlist.py:238(clear)
+    10000    0.009    0.000    0.009    0.000 {method 'difference' of 'set' objects}
+      479    0.001    0.000    0.009    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:445(__setitem__)
+      546    0.003    0.000    0.008    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1448(moveaxis)
+       38    0.002    0.000    0.008    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/transformations.py:2300(flips_winding)
+    10000    0.005    0.000    0.008    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:88(__len__)
+    10134    0.008    0.000    0.008    0.000 {method 'update' of 'set' objects}
+      191    0.000    0.000    0.008    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1353(is_instance_named)
+    10000    0.005    0.000    0.008    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py:128(isComplexType)
+       64    0.002    0.000    0.007    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:583(bounds)
+      479    0.001    0.000    0.007    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:122(kind)
+      196    0.001    0.000    0.007    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1394(type_named)
+    10000    0.007    0.000    0.007    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbol_graph/symbol_graph.py:124(instance)
+      159    0.002    0.000    0.007    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1380(type_bases)
+      358    0.000    0.000    0.006    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:466(__contains__)
+    10234    0.004    0.000    0.006    0.000 /usr/lib/python3.12/uuid.py:268(__hash__)
+      478    0.000    0.000    0.006    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:357(_verify_hash)
+      666    0.002    0.000    0.006    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:630(__setitem__)
+     1260    0.003    0.000    0.006    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:241(is_shape)
+       43    0.000    0.000    0.006    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/triangles.py:74(normals)
+      478    0.000    0.000    0.005    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:470(__len__)
+      345    0.001    0.000    0.005    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:507(vertices)
+    10365    0.005    0.000    0.005    0.000 {built-in method numpy.asarray}
+    20000    0.005    0.000    0.005    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:92(<genexpr>)
+    20268    0.005    0.000    0.005    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/shape_collection.py:227(bounding_boxes)
+      200    0.001    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:2287(allclose)
+    12993    0.004    0.000    0.004    0.000 {built-in method builtins.callable}
+      883    0.002    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:73(tracked_array)
+     1601    0.002    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:209(is_sequence)
+    10000    0.004    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/symbolic_math/symbolic_math.py:328(__call__)
+       73    0.002    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/transformations.py:2161(transform_points)
+      243    0.001    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2962(ptp)
+       49    0.000    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:224(vertex_colors)
+     1092    0.003    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1386(normalize_axis_tuple)
+    12991    0.004    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3185(_min_dispatcher)
+      223    0.000    0.000    0.004    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:259(process)
+      159    0.001    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:295(hstack)
+      243    0.001    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:235(_ptp)
+     2755    0.003    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:178(__array_finalize__)
+    12991    0.003    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3047(_max_dispatcher)
+      227    0.000    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1766(is_empty)
+      760    0.002    0.000    0.003    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+      227    0.001    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:600(is_empty)
+       43    0.000    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:2243(allclose)
+      272    0.001    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:360(faces)
+      401    0.000    0.000    0.003    0.000 {method 'sum' of 'numpy.ndarray' objects}
+      603    0.001    0.000    0.003    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:189(__array_wrap__)
+     1491    0.002    0.000    0.003    0.000 /usr/lib/python3.12/copy.py:231(_keep_alive)
+     2908    0.002    0.000    0.002    0.000 {built-in method numpy.asanyarray}
+    10000    0.002    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2571(_norm_dispatcher)
+      300    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3328(prod)
+     1027    0.001    0.000    0.002    0.000 {method 'view' of 'numpy.ndarray' objects}
+      401    0.000    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:50(_sum)
+      468    0.000    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:213(vertex_colors)
+      100    0.002    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:886(triangles)
+       73    0.000    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:419(id_set)
+       65    0.000    0.000    0.002    0.000 {method 'min' of 'numpy.ndarray' objects}
+       43    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:2337(isclose)
+      159    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:21(atleast_1d)
+      489    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:61(__init__)
+       65    0.000    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:46(_amin)
+      266    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/objects.py:16(create_visual)
+      138    0.000    0.000    0.002    0.000 {method 'max' of 'numpy.ndarray' objects}
+       43    0.001    0.000    0.002    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:84(unitize)
+      138    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:42(_amax)
+        5    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:472(concatenate)
+      601    0.001    0.000    0.001    0.000 {function TrackedArray.__array_wrap__ at 0x7312387d6ac0}
+      256    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:76(_count_reduce_items)
+        5    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/objects.py:37(concatenate)
+        1    0.000    0.000    0.001    0.001 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:809(mesh)
+       76    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:621(column_stack)
+        1    0.000    0.000    0.001    0.001 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/creation.py:1063(cylinder)
+        1    0.000    0.000    0.001    0.001 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/creation.py:41(revolve)
+      311    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/getlimits.py:697(__init__)
+       51    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:1204(tile)
+      278    0.000    0.000    0.001    0.000 {built-in method builtins.all}
+       64    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1125(referenced_vertices)
+      985    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:489(vertices)
+       38    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:1369(diff)
+       53    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:220(vstack)
+        5    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:991(append_faces)
+        4    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/texture.py:120(copy)
+       37    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1481(<genexpr>)
+     1932    0.001    0.000    0.001    0.000 {built-in method numpy.lib.array_utils.normalize_axis_index}
+        4    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/material.py:58(copy)
+       36    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1502(<genexpr>)
+   148/12    0.000    0.000    0.001    0.000 <frozen abc>:121(__subclasscheck__)
+       37    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/objects.py:60(<genexpr>)
+   148/12    0.000    0.000    0.001    0.000 {built-in method _abc._abc_subclasscheck}
+       44    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2241(clip)
+       43    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2589(all)
+      666    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:569(mutable)
+        4    0.000    0.000    0.001    0.000 /usr/lib/python3.12/copy.py:247(_reconstruct)
+      271    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/ray/ray_pyembree.py:26(__init__)
+     1035    0.001    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:336(__init__)
+      546    0.001    0.000    0.001    0.000 {method 'transpose' of 'numpy.ndarray' objects}
+       51    0.000    0.000    0.001    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:51(_wrapfunc)
+      884    0.001    0.000    0.001    0.000 {built-in method numpy.ascontiguousarray}
+      908    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:228(<genexpr>)
+     2182    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:627(__getitem__)
+      113    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:820(local_frame_bounding_box)
+      725    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:343(faces)
+       73    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:137(ones)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:89(_wrapreduction_any_all)
+      212    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:216(_vhstack_dispatcher)
+     1238    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:667(__contains__)
+       22    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+      288    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:208(_arrays_for_stack_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1159(merge_vertices)
+      493    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:2294(visual)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/grouping.py:24(merge_vertices)
+      100    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/iteration.py:78(chain)
+       37    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:1487(<genexpr>)
+       44    0.000    0.000    0.000    0.000 {method 'clip' of 'numpy.ndarray' objects}
+      300    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:2280(visual)
+     2048    0.000    0.000    0.000    0.000 /usr/lib/python3.12/copy.py:172(_deepcopy_atomic)
+       44    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:99(_clip)
+       53    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:80(atleast_2d)
+     1093    0.000    0.000    0.000    0.000 {built-in method _operator.index}
+      546    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/krrood/src/krrood/entity_query_language/utils.py:192(get_function_argument_names)
+      311    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/getlimits.py:721(max)
+       10    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:2121(vstack_empty)
+      215    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:2429(<genexpr>)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py:440(__enter__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:3308(signature)
+      764    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:557(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:3050(from_callable)
+       76    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:617(_column_stack_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/grouping.py:458(unique_rows)
+       64    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:2470(_signature_from_callable)
+       10    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:5644(append)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1388(remove_infinite_values)
+        2    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1195(update_vertices)
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+      636    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+        5    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/objects.py:84(<genexpr>)
+       74    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:392(clear)
+       51    0.000    0.000    0.000    0.000 {method 'repeat' of 'numpy.ndarray' objects}
+       20    0.000    0.000    0.000    0.000 /usr/lib/python3.12/copy.py:191(_deepcopy_list)
+       45    0.000    0.000    0.000    0.000 {method 'round' of 'numpy.ndarray' objects}
+       88    0.000    0.000    0.000    0.000 {built-in method builtins.abs}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:2366(_signature_from_function)
+      182    0.000    0.000    0.000    0.000 {built-in method numpy.promote_types}
+      546    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1444(_moveaxis_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/grouping.py:277(unique_ordered)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/triangles.py:48(area)
+        6    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2879(cumsum)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py:456(__exit__)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py:145(unique)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py:339(_unique1d)
+      300    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3323(_prod_dispatcher)
+      298    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/multiarray.py:180(concatenate)
+      243    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2958(_ptp_dispatcher)
+       43    0.000    0.000    0.000    0.000 {built-in method numpy._core._multiarray_umath._make_extobj}
+      268    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/multiarray.py:761(dot)
+        6    0.000    0.000    0.000    0.000 {method 'cumsum' of 'numpy.ndarray' objects}
+       43    0.000    0.000    0.000    0.000 {method 'set' of '_contextvars.ContextVar' objects}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/grouping.py:170(hashable_rows)
+      271    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/permutate.py:126(__init__)
+       44    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/cram/semantic_digital_twin/src/semantic_digital_twin/world_description/geometry.py:83(to_rgba)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/function_base.py:25(linspace)
+      271    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/proximity.py:311(__init__)
+       10    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:1904(ravel)
+       43    0.000    0.000    0.000    0.000 {method 'reset' of '_contextvars.ContextVar' objects}
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:2712(__init__)
+      182    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1518(_cross_dispatcher)
+      149    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:1287(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/base.py:1263(update_faces)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:477(__exit__)
+        5    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/parent.py:64(__deepcopy__)
+        3    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_dtype.py:350(_name_get)
+        4    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/texture.py:12(__init__)
+        5    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/parent.py:80(source)
+      159    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:17(_atleast_1d_dispatcher)
+        3    0.000    0.000    0.000    0.000 {method 'argsort' of 'numpy.ndarray' objects}
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py:430(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'mappingproxy' objects}
+       73    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/multiarray.py:1098(copyto)
+       49    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:621(clear)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        8    0.000    0.000    0.000    0.000 /usr/lib/python3.12/copy.py:252(<genexpr>)
+        4    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/texture.py:93(uv)
+        5    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/parent.py:59(__getstate__)
+       11    0.000    0.000    0.000    0.000 {built-in method time.clock_gettime_ns}
+       52    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:1277(<genexpr>)
+       44    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2236(_clip_dispatcher)
+        4    0.000    0.000    0.000    0.000 {method '__reduce_ex__' of 'object' objects}
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.12/enum.py:726(__call__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:2998(__init__)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:2239(_allclose_dispatcher)
+        3    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_dtype.py:334(_name_includes_bit_suffix)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1390(_handle_fromlist)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:645(parent)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2584(_all_dispatcher)
+        4    0.000    0.000    0.000    0.000 <frozen _collections_abc>:804(get)
+       51    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py:1200(_tile_dispatcher)
+        4    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/texture.py:105(uv)
+        3    0.000    0.000    0.000    0.000 {built-in method numpy.arange}
+       38    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:1365(_diff_dispatcher)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:747(unwrap)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:2333(_isclose_dispatcher)
+       53    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:76(_atleast_2d_dispatcher)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:175(get_annotations)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/util.py:800(decimal_to_digits)
+       43    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/multiarray.py:690(result_type)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2118(shape)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numerictypes.py:471(issubdtype)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/copyreg.py:98(__newobj__)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2018(nonzero)
+        4    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:563(pop)
+        5    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:3045(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:391(update_vertices)
+        2    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numerictypes.py:289(issubclass_)
+       10    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        3    0.000    0.000    0.000    0.000 {method 'isidentifier' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'flatten' of 'numpy.ndarray' objects}
+       10    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:5640(_append_dispatcher)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.12/enum.py:1129(__new__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:371(isfunction)
+        2    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:425(__getitem__)
+        3    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_dtype.py:24(_kind_name)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/grouping.py:236(float_to_int)
+       10    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:1900(_ravel_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/_internal.py:941(npy_ctypes_check)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:495(_update_key)
+        1    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'nonzero' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/visual/color.py:110(defined)
+        6    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2875(_cumsum_dispatcher)
+        3    0.000    0.000    0.000    0.000 {method '__contains__' of 'frozenset' objects}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1927(isscalar)
+        4    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'result_type' of 'numpy._core._multiarray_umath._array_converter' objects}
+        1    0.000    0.000    0.000    0.000 {method 'wrap' of 'numpy._core._multiarray_umath._array_converter' objects}
+        1    0.000    0.000    0.000    0.000 {method 'as_arrays' of 'numpy._core._multiarray_umath._array_converter' objects}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3523(ndim)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:2765(name)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py:132(_unpack_tuple)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/copy.py:102(_copy_immutable)
+        1    0.000    0.000    0.000    0.000 {built-in method sys.getrecursionlimit}
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/trimesh/caching.py:474(__enter__)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3519(_ndim_dispatcher)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/inspect.py:3058(parameters)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/function_base.py:20(_linspace_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2114(_shape_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py:140(_unique_dispatcher)
+        1    0.000    0.000    0.000    0.000 /home/teddy/uni-notes/ma/rumspielen/venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:2014(_nonzero_dispatcher)
+
+
