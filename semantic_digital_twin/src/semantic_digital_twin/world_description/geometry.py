@@ -1202,10 +1202,13 @@ class BoundingBox:
 
         # Get all 8 corners of the BB in link-local space
         list_self_T_corner = [
-            HomogeneousTransformationMatrix.from_point_rotation_matrix(
-                self_T_corner
-            ).to_np()
-            for self_T_corner in self.get_points()
+            np.array([[1, 0, 0, x],
+                      [0, 1, 0, y],
+                      [0, 0, 1, z],
+                      [0, 0, 0, 1]])
+            for x in (self.min_x, self.max_x)
+            for y in (self.min_y, self.max_y)
+            for z in (self.min_z, self.max_z)
         ]  # shape (8, 3)
 
         list_reference_T_corner = [
