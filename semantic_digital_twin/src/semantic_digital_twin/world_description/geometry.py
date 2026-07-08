@@ -1189,16 +1189,13 @@ class BoundingBox:
         """
         Transform the bounding box to a different reference frame.
         """
-        reference_T_new_origin = HomogeneousTransformationMatrix(
-            data=reference_T_new_origin.to_np(),
-            reference_frame=reference_T_new_origin.reference_frame,
-        )
-
         new_origin_reference_T_self = self.origin.reference_frame._world.transform(
             self.origin, reference_T_new_origin.reference_frame
-        )
+        ).to_np()
 
-        self_T_new_pose = reference_T_new_origin.inverse() @ new_origin_reference_T_self
+        self_T_new_pose = (
+            np.linalg.inv(reference_T_new_origin.to_np()) @ new_origin_reference_T_self
+        )
 
         # Get all 8 corners of the BB in link-local space
         list_self_T_corner = [
@@ -1212,7 +1209,7 @@ class BoundingBox:
         ]  # shape (8, 3)
 
         list_reference_T_corner = [
-            self_T_new_pose.to_np() @ self_T_corner
+            self_T_new_pose @ self_T_corner
             for self_T_corner in list_self_T_corner
         ]
 
