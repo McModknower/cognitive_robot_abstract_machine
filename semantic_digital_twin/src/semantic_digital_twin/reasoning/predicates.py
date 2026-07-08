@@ -16,6 +16,7 @@ from krrood.entity_query_language.predicate import (
 )
 from random_events.interval import Interval
 from semantic_digital_twin.datastructures.prefixed_name import PrefixedName
+from semantic_digital_twin.datastructures.types import NpMatrix4x4
 from semantic_digital_twin.datastructures.variables import SpatialVariables
 from semantic_digital_twin.spatial_computations.ik_solver import (
     MaxIterationsException,
@@ -249,10 +250,10 @@ def is_supported_by(
     If the intersection is higher than this value, the check returns False due to unhandled clipping.
     :return: True if the second object is supported by the first object, False otherwise
     """
-    if Below(
-        supported_body.center_of_mass,
-        supporting_body.center_of_mass,
-        supported_body.global_transform,
+    if BelowNP(
+        supported_body.center_of_mass_np,
+        supporting_body.center_of_mass_np,
+        supported_body.global_transform_np,
     )():
         return False
     bounding_box_supported_body = (
@@ -373,6 +374,23 @@ class PointSpatialRelation(Symbol, ABC):
 
 
 @dataclass
+class PointSpatialRelationNP(Symbol, ABC):
+    """
+    Check if the point is spatially related to the other point.
+    """
+
+    point: (np.ndarray, KinematicStructureEntity)
+    """
+    The point for which the check should be done.
+    """
+
+    other: (np.ndarray, KinematicStructureEntity)
+    """
+    The other point.
+    """
+
+
+@dataclass
 class ViewDependentSpatialRelation(PointSpatialRelation, ABC):
 
     point_of_view: HomogeneousTransformationMatrix
@@ -419,6 +437,40 @@ class ViewDependentSpatialRelation(PointSpatialRelation, ABC):
 
 
 @dataclass
+class ViewDependentSpatialRelationNP(PointSpatialRelationNP, ABC):
+
+    point_of_view: NpMatrix4x4
+    """
+    The reference spot from where to look at the bodies.
+    """
+
+    eps: float = 1e-12
+    """
+    A small value to avoid division by zero.
+    """
+
+    spatial_relation_result: bool = False
+
+    def _signed_distance_along_direction(self, index: int) -> float:
+        """
+        Calculate the spatial relation between self.point and self.other with respect to a given
+        reference point (self.point_of_semantic_annotation) and a specified axis index. This function computes the
+        signed distance along a specified direction derived from the reference point
+        to compare the positions.
+
+        :param index: The index of the axis in the transformation matrix along which
+            the spatial relation is computed.
+        :return: The signed distance between the first and the second points along the given direction.
+        """
+        ref_np = self.point_of_view
+        front_world = ref_np[:3, index]
+        front_norm = front_world / (np.linalg.norm(front_world) + self.eps)
+        s_body = front_norm.dot(self.point.to_np()[:3])
+        s_other = front_norm.dot(self.other.to_np()[:3])
+        return s_body - s_other
+
+
+@dataclass
 class LeftOf(ViewDependentSpatialRelation):
     """
     The "left" direction is taken as the -Y axis of the given point of semantic_annotation.
@@ -453,6 +505,16 @@ class Above(ViewDependentSpatialRelation):
 
 @dataclass
 class Below(ViewDependentSpatialRelation):
+    """
+    The "below" direction is taken as the -Z axis of the given point of semantic_annotation.
+    """
+
+    def __call__(self) -> bool:
+        self.spatial_relation_result = self._signed_distance_along_direction(2) < 0.0
+        return self.spatial_relation_result
+
+@dataclass
+class BelowNP(ViewDependentSpatialRelationNP):
     """
     The "below" direction is taken as the -Z axis of the given point of semantic_annotation.
     """

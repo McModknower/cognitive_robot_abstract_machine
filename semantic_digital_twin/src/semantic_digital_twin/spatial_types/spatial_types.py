@@ -1104,6 +1104,31 @@ class Point3(sm.SymbolicMathType, SpatialType, SubclassJSONSerializer):
         return self.to_generic_vector().euclidean_distance(other.to_generic_vector())
 
 
+@dataclass
+class Point3NP:
+    data: np.ndarray
+    reference_frame: KinematicStructureEntity
+
+    def __init__(
+        self,
+        x: float = 0,
+        y: float = 0,
+        z: float = 0,
+        reference_frame: Optional[KinematicStructureEntity] = None,
+    ):
+        """
+        :param x: X-coordinate of the point. Defaults to 0.
+        :param y: Y-coordinate of the point. Defaults to 0.
+        :param z: Z-coordinate of the point. Defaults to 0.
+        :param reference_frame:
+        """
+        self.data = np.array([x, y, z, 1])
+        self.reference_frame = reference_frame
+
+    def to_np(self) -> np.ndarray:
+        return self.data
+
+
 @dataclass(eq=False, init=False, repr=False)
 class Vector3(sm.SymbolicMathType, SpatialType, SubclassJSONSerializer):
     """

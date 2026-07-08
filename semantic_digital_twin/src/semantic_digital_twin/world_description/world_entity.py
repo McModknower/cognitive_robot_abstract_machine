@@ -50,6 +50,7 @@ from semantic_digital_twin.adapters.world_entity_kwargs_tracker import (
 )
 from semantic_digital_twin.datastructures.joint_state import JointState
 from semantic_digital_twin.datastructures.prefixed_name import PrefixedName
+from semantic_digital_twin.datastructures.types import NpMatrix4x4
 from semantic_digital_twin.exceptions import (
     ReferenceFrameMismatchError,
     WorldEntityWithIDNotInKwargs,
@@ -59,6 +60,7 @@ from semantic_digital_twin.mixin import HasSimulatorProperties
 from semantic_digital_twin.spatial_types.spatial_types import (
     HomogeneousTransformationMatrix,
     Point3,
+    Point3NP,
     Pose,
 )
 from semantic_digital_twin.utils import IDGenerator, camel_case_split
@@ -354,12 +356,43 @@ class KinematicStructureEntity(WorldEntityWithSimulatorProperties, ABC):
         )
 
     @property
+    def center_of_mass_np(self) -> Point3NP:
+        """
+        Computes the center of mass of this KinematicStructureEntity.
+        """
+        # Center of mass in the body's local frame (collision geometry)
+        com_local: np.ndarray[np.float64] = self.combined_mesh.center_mass  # (3,)
+
+        # Transform to world frame using the body's global pose
+        # Don't use world.transform as that creates a HomogeneousTransformationMatrix internally
+        world = self._world
+        target_frame_T_reference_frame = world._forward_kinematic_manager.compute_np(
+            root=world.root, tip=self
+        )
+        result = target_frame_T_reference_frame @ np.append(com_local, [0])
+
+        return Point3NP(
+            x=result[0],
+            y=result[1],
+            z=result[2],
+            reference_frame=world.root,
+        )
+
+    @property
     def global_transform(self) -> HomogeneousTransformationMatrix:
         """
         Computes the transform of the KinematicStructureEntity in the world frame.
         :return: TransformationMatrix representing the global transform.
         """
         return self._world.compute_forward_kinematics(self._world.root, self)
+
+    @property
+    def global_transform_np(self) -> NpMatrix4x4:
+        """
+        Computes the transform of the KinematicStructureEntity in the world frame.
+        :return: TransformationMatrix representing the global transform.
+        """
+        return self._world.compute_forward_kinematics_np(self._world.root, self)
 
     @property
     def global_pose(self) -> Pose:
