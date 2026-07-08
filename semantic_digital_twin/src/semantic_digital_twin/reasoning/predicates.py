@@ -401,6 +401,11 @@ class ViewDependentSpatialRelation(PointSpatialRelation, ABC):
         ref_np = self.point_of_view.to_np()
         front_world = ref_np[:3, index]
         front_norm = front_world / (np.linalg.norm(front_world) + self.eps)
+        if self.point.is_constant() and self.other.is_constant():
+            s_body = front_norm.dot(self.point.to_np()[:3])
+            s_other = front_norm.dot(self.other.to_np()[:3])
+            return s_body - s_other
+
         front_norm = Vector3(
             x=front_norm[0],
             y=front_norm[1],
