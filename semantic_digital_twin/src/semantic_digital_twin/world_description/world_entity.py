@@ -337,15 +337,21 @@ class KinematicStructureEntity(WorldEntityWithSimulatorProperties, ABC):
         """
         # Center of mass in the body's local frame (collision geometry)
         com_local: np.ndarray[np.float64] = self.combined_mesh.center_mass  # (3,)
+
         # Transform to world frame using the body's global pose
-        com = Point3(
-            x=com_local[0],
-            y=com_local[1],
-            z=com_local[2],
-            reference_frame=self,
-        )
+        # Don't use world.transform as that creates a HomogeneousTransformationMatrix internally
         world = self._world
-        return world.transform(com, world.root)
+        target_frame_T_reference_frame = world._forward_kinematic_manager.compute_np(
+            root=world.root, tip=self
+        )
+        result = target_frame_T_reference_frame @ np.append(com_local, [0])
+
+        return Point3(
+            x=result[0],
+            y=result[1],
+            z=result[2],
+            reference_frame=world.root,
+        )
 
     @property
     def global_transform(self) -> HomogeneousTransformationMatrix:
