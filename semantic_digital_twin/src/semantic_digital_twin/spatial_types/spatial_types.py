@@ -400,7 +400,7 @@ class HomogeneousTransformationMatrix(
 
     @property
     def x(self) -> sm.Scalar:
-        return self.casadi_sx[0, 3]
+        return float(self.casadi_sx[0, 3])
 
     @x.setter
     def x(self, value: sm.ScalarData):
@@ -408,7 +408,7 @@ class HomogeneousTransformationMatrix(
 
     @property
     def y(self) -> sm.Scalar:
-        return self.casadi_sx[1, 3]
+        return float(self.casadi_sx[1, 3])
 
     @y.setter
     def y(self, value: sm.ScalarData):
@@ -416,7 +416,7 @@ class HomogeneousTransformationMatrix(
 
     @property
     def z(self) -> sm.Scalar:
-        return self.casadi_sx[2, 3]
+        return float(self.casadi_sx[2, 3])
 
     @z.setter
     def z(self, value: sm.ScalarData):
