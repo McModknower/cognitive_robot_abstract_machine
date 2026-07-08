@@ -1,0 +1,24 @@
+parsing urdf
+reasoning
+testing supported by for 100 bodies
+tested 1024 relations, with 2 being true
+elapsed: 3815839130 ns, expected end in 33448214873.90625 ns
+tested 2048 relations, with 7 being true
+elapsed: 6886040852 ns, expected end in 26737205495.65625 ns
+tested 3072 relations, with 15 being true
+elapsed: 8812172917 ns, expected end in 19873285797.192707 ns
+tested 4096 relations, with 17 being true
+elapsed: 10293363797 ns, expected end in 14836918910.519531 ns
+tested 5120 relations, with 23 being true
+elapsed: 12166765928 ns, expected end in 11596448775.125 ns
+tested 6144 relations, with 26 being true
+elapsed: 13802662130 ns, expected end in 8662608263.880207 ns
+tested 7168 relations, with 30 being true
+elapsed: 15463719115 ns, expected end in 6109549739.631695 ns
+tested 8192 relations, with 31 being true
+elapsed: 16864748083 ns, expected end in 3722102604.2558594 ns
+tested 9216 relations, with 57 being true
+elapsed: 18785615740 ns, expected end in 1598081894.5486107 ns
+tested 10000 relations, with 64 being true.
+finished after 20084945012 ns (aka 20.084945012 s)
+average time per test: 2.0084945012 ms

@@ -1221,14 +1221,10 @@ class BoundingBox:
         min_corner = np.min(list_reference_P_corner, axis=0)
         max_corner = np.max(list_reference_P_corner, axis=0)
 
-        world_bb = BoundingBox.from_min_max(
-            Point3.from_iterable(
-                min_corner, reference_frame=reference_T_new_origin.reference_frame
-            ),
-            Point3.from_iterable(
-                max_corner, reference_frame=reference_T_new_origin.reference_frame
-            ),
-            reference_T_new_origin,
+        world_bb = BoundingBox(
+            *min_corner[:3],
+            *max_corner[:3],
+            origin=reference_T_new_origin,
         )
 
         return world_bb
