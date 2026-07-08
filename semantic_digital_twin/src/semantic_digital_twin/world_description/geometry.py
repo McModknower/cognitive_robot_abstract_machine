@@ -1229,6 +1229,52 @@ class BoundingBox:
 
         return world_bb
 
+    def transform_to_frame(
+        self, reference_frame: KinematicStructureEntity
+    ) -> Self:
+        """
+        Transform the bounding box to a different reference frame.
+        """
+        (new_origin_reference_T_self, _) = self.origin.reference_frame._world.transform_np(
+            (self.origin.to_np(), self.origin.reference_frame), reference_frame
+        )
+
+        self_T_new_pose = new_origin_reference_T_self
+
+        # Get all 8 corners of the BB in link-local space
+        list_self_T_corner = [
+            np.array([[1, 0, 0, x],
+                      [0, 1, 0, y],
+                      [0, 0, 1, z],
+                      [0, 0, 0, 1]])
+            for x in (self.min_x, self.max_x)
+            for y in (self.min_y, self.max_y)
+            for z in (self.min_z, self.max_z)
+        ]  # shape (8, 3)
+
+        list_reference_T_corner = [
+            self_T_new_pose @ self_T_corner
+            for self_T_corner in list_self_T_corner
+        ]
+
+        list_reference_P_corner = [
+            reference_T_corner[:3, 3:] for reference_T_corner in list_reference_T_corner
+        ]
+
+        # Compute new corner points
+        min_corner = np.min(list_reference_P_corner, axis=0)
+        max_corner = np.max(list_reference_P_corner, axis=0)
+
+        world_bb = BoundingBox(
+            *min_corner[:3],
+            *max_corner[:3],
+            origin=HomogeneousTransformationMatrix(
+                reference_frame=reference_frame
+            ),
+        )
+
+        return world_bb
+
     def __eq__(self, other: BoundingBox) -> bool:
         return (
             np.isclose(self.min_x, other.min_x)

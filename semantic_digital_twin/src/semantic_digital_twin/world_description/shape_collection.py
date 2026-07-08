@@ -153,8 +153,18 @@ class ShapeCollection(SubclassJSONSerializer):
         :param reference_frame: The reference frame to express the bounding boxes in.
         :returns: A collection of bounding boxes in world-space coordinates.
         """
-        return self.as_bounding_box_collection_at_origin(
-            HomogeneousTransformationMatrix(reference_frame=reference_frame)
+        world_bboxes = []
+
+        for shape in self.shapes:
+            if shape.origin.reference_frame is None:
+                continue
+            local_bb: BoundingBox = shape.local_frame_bounding_box
+            world_bb = local_bb.transform_to_frame(reference_frame)
+            world_bboxes.append(world_bb)
+
+        return BoundingBoxCollection(
+            world_bboxes,
+            reference_frame,
         )
 
     def to_json(self) -> Dict[str, Any]:
