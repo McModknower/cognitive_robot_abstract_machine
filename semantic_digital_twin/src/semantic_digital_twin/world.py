@@ -2175,6 +2175,32 @@ class World(HasSimulatorProperties):
             case _:
                 return target_frame_T_reference_frame @ spatial_object
 
+    def transform_np(
+        self,
+        spatial_object: (np.ndarray, KinematicStructureEntity),
+        target_frame: KinematicStructureEntity,
+    ) -> (np.ndarray, KinematicStructureEntity):
+        """
+        Transform a given spatial object from its reference frame to a target frame.
+
+        Calculate the transformation from the reference frame of the provided
+        spatial object to the specified target frame.
+        Then apply the transformation matrix directly.
+
+        :param spatial_object: The spatial object to be transformed.
+        :param target_frame: The target KinematicStructureEntity frame to which the spatial object should
+            be transformed.
+        :return: The spatial object transformed to the target frame.
+        """
+        (matrix, reference_frame) = spatial_object
+        if reference_frame is None:
+            raise MissingReferenceFrameError(spatial_object)
+        target_frame_T_reference_frame = self._forward_kinematic_manager.compute_np(
+            root=target_frame, tip=reference_frame
+        )
+
+        return (target_frame_T_reference_frame @ matrix, target_frame)
+
     def __deepcopy__(self, memo):
         memo = {} if memo is None else memo
         me_id = id(self)

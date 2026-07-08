@@ -1189,9 +1189,9 @@ class BoundingBox:
         """
         Transform the bounding box to a different reference frame.
         """
-        new_origin_reference_T_self = self.origin.reference_frame._world.transform(
-            self.origin, reference_T_new_origin.reference_frame
-        ).to_np()
+        (new_origin_reference_T_self, _) = self.origin.reference_frame._world.transform_np(
+            (self.origin.to_np(), self.origin.reference_frame), reference_T_new_origin.reference_frame
+        )
 
         self_T_new_pose = (
             np.linalg.inv(reference_T_new_origin.to_np()) @ new_origin_reference_T_self
