@@ -25,9 +25,9 @@ file_name = "package://iai_apartment/urdf/apartment.urdf"
 
 print('parsing urdf')
 world: World = URDFParser.from_file(file_name).parse()
-print('reasoning')
-world_reasoner = WorldReasoner(world)
-world_reasoner.reason()
+# print('reasoning')
+# world_reasoner = WorldReasoner(world)
+# world_reasoner.reason()
 bodies = world.bodies_with_collision
 
 # print(world.semantic_annotations)

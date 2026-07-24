@@ -37,6 +37,7 @@ from krrood.entity_query_language.predicate import Symbol
 from krrood.symbolic_math.symbolic_math import Matrix
 from krrood.utils import get_full_class_name, memoize
 from semantic_digital_twin.datastructures.joint_state import JointState
+from semantic_digital_twin.datastructures.types import NpMatrix4x4
 from semantic_digital_twin.world_description.geometry import Mesh
 from semantic_digital_twin.world_description.inertial_properties import Inertial
 from semantic_digital_twin.world_description.shape_collection import (
@@ -354,6 +355,14 @@ class KinematicStructureEntity(WorldEntityWithSimulatorProperties, ABC):
         :return: TransformationMatrix representing the global transform.
         """
         return self._world.compute_forward_kinematics(self._world.root, self)
+
+    @property
+    def global_transform_np(self) -> NpMatrix4x4:
+        """
+        Computes the transform of the KinematicStructureEntity in the world frame.
+        :return: TransformationMatrix representing the global transform.
+        """
+        return self._world.compute_forward_kinematics_np(self._world.root, self)
 
     @property
     def global_pose(self) -> Pose:
