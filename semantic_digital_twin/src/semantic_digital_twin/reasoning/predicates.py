@@ -254,7 +254,7 @@ def is_supported_by(
     """
     fast_result = _fast_is_supported_by(supported_body, supporting_body, max_intersection_height)
 
-    if fast_result is not None:
+    if False and fast_result is not None:
         return fast_result
 
     if BelowNP(
