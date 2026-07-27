@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 import trimesh.boolean
 from trimesh.collision import CollisionManager
-from typing_extensions import List, TYPE_CHECKING, Iterable, Type
+from typing_extensions import List, TYPE_CHECKING, Iterable, Type, Optional
 
 from krrood.entity_query_language.predicate import (
     Predicate,
@@ -35,6 +35,8 @@ from semantic_digital_twin.world_description.world_entity import (
     Region,
     KinematicStructureEntity,
 )
+
+import rust_integration
 
 if TYPE_CHECKING:
     from semantic_digital_twin.world import World
@@ -250,6 +252,11 @@ def is_supported_by(
     If the intersection is higher than this value, the check returns False due to unhandled clipping.
     :return: True if the second object is supported by the first object, False otherwise
     """
+    fast_result = _fast_is_supported_by(supported_body, supporting_body, max_intersection_height)
+
+    if fast_result is not None:
+        return fast_result
+
     if BelowNP(
         supported_body.center_of_mass_np,
         supporting_body.center_of_mass_np,
@@ -278,6 +285,27 @@ def is_supported_by(
     size = sum([si.upper - si.lower for si in z_intersection.simple_sets])
     return size < max_intersection_height
 
+
+def _fast_is_supported_by(
+    supported_body: Body, supporting_body: Body, max_intersection_height: float
+) -> Optional[bool]:
+    if len(supported_body.collision.shapes) != 1 \
+       or len(supporting_body.collision.shapes) != 1:
+        return None
+
+    supported_shape = supported_body.collision.shapes[0].local_frame_bounding_box
+    supported_frame_transform = supported_body._world.compute_forward_kinematics_np(supported_body._world.root, supported_shape.origin.reference_frame)
+    supported_transform = supported_shape.origin.to_np()
+
+    supporting_shape = supporting_body.collision.shapes[0].local_frame_bounding_box
+    supporting_frame_transform = supporting_body._world.compute_forward_kinematics_np(supporting_body._world.root, supporting_shape.origin.reference_frame)
+    supporting_transform = supporting_shape.origin.to_np()
+    return rust_integration.is_supported_by(
+        supported_shape, supported_frame_transform, supported_transform,
+        supporting_shape, supporting_frame_transform, supporting_transform,
+        max_intersection_height
+    )
+    # return False
 
 @symbolic_function
 def is_supporting(supporting_body: Body, max_intersection_height: float = 0.1) -> bool:
