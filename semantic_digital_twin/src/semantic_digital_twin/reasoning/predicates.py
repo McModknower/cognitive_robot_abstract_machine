@@ -300,9 +300,12 @@ def _fast_is_supported_by(
     supporting_shape = supporting_body.collision.shapes[0].local_frame_bounding_box
     supporting_frame_transform = supporting_body._world.compute_forward_kinematics_np(supporting_body._world.root, supporting_shape.origin.reference_frame)
     supporting_transform = supporting_shape.origin.to_np()
+
+    supported_frame_T_supporting_frame = supporting_body._world.compute_forward_kinematics_np(supported_shape.origin.reference_frame, supporting_shape.origin.reference_frame)
     return rust_integration.is_supported_by(
-        supported_shape, supported_frame_transform, supported_transform,
-        supporting_shape, supporting_frame_transform, supporting_transform,
+        supported_shape, supported_transform,
+        supporting_shape, supporting_transform,
+        supported_frame_T_supporting_frame,
         max_intersection_height
     )
     # return False
