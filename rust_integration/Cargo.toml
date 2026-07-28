@@ -11,3 +11,6 @@ crate-type = ["cdylib"]
 [dependencies]
 numpy = { version = "0.29.0", features = ["nalgebra"] }
 pyo3 = "0.29.0"
+
+[patch.crates-io]
+nalgebra = { git = 'https://github.com/McModknower/nalgebra.git', branch = 'fix/matrix-multiplication-row-major' }
