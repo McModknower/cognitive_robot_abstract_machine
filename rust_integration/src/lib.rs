@@ -33,11 +33,11 @@ mod rust_integration {
         let supporting_shape = supporting_shape
             .transform(&(supported_frame_t_supporting_frame * supporting_transform).as_view());
 
-        // check if the bottom of supported shape is close to top of supporting shape
-        let height_diff = (supported_shape.min_z - supporting_shape.max_z).abs();
-        if height_diff > max_intersection_height {
-            return Ok(false);
-        }
+        // // check if the bottom of supported shape is close to top of supporting shape
+        // let height_diff = (supported_shape.min_z - supporting_shape.max_z).abs();
+        // if height_diff > max_intersection_height {
+        //     return Ok(false);
+        // }
 
         // check if supported shape is inside x/y column of supporting shape.
         let result = supporting_shape.min_x <= supported_shape.min_x

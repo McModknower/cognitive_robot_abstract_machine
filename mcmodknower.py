@@ -16,7 +16,7 @@ pip install mujoco giskardpy_bullet_bindings
 pip install --editable ./semantic_digital_twin ./krrood ./giskardpy
 """
 
-output = None  # or open("output-cram.txt","x")
+output = None  # or open("output.txt", "x")
 
 os.environ['ROS_PACKAGE_PATH'] = "../iai_maps/iai_apartment"
 file_name = "package://iai_apartment/urdf/apartment.urdf"

@@ -252,10 +252,6 @@ def is_supported_by(
     If the intersection is higher than this value, the check returns False due to unhandled clipping.
     :return: True if the second object is supported by the first object, False otherwise
     """
-    fast_result = _fast_is_supported_by(supported_body, supporting_body, max_intersection_height)
-
-    if fast_result is not None:
-        return fast_result
 
     if BelowNP(
         supported_body.center_of_mass_np,
@@ -263,6 +259,12 @@ def is_supported_by(
         supported_body.global_transform_np,
     )():
         return False
+
+    fast_result = _fast_is_supported_by(supported_body, supporting_body, max_intersection_height)
+
+    if fast_result is not None:
+        return fast_result
+
     bounding_box_supported_body = (
         supported_body.collision.as_bounding_box_collection_in_frame(
             reference_frame=supported_body
@@ -294,11 +296,9 @@ def _fast_is_supported_by(
         return None
 
     supported_shape = supported_body.collision.shapes[0].local_frame_bounding_box
-    supported_frame_transform = supported_body._world.compute_forward_kinematics_np(supported_body._world.root, supported_shape.origin.reference_frame)
     supported_transform = supported_shape.origin.to_np()
 
     supporting_shape = supporting_body.collision.shapes[0].local_frame_bounding_box
-    supporting_frame_transform = supporting_body._world.compute_forward_kinematics_np(supporting_body._world.root, supporting_shape.origin.reference_frame)
     supporting_transform = supporting_shape.origin.to_np()
 
     supported_frame_T_supporting_frame = supporting_body._world.compute_forward_kinematics_np(supported_shape.origin.reference_frame, supporting_shape.origin.reference_frame)
